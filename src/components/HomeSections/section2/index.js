@@ -1,7 +1,7 @@
 import  React from 'react';
 const AboutUsSection =() => {
     return (
-        <section className="about_area section_gap_bottom">
+        <section className="about_area section_gap">
 		<div className="container">
 			<div className="row">	
 				<div className="single_about row">

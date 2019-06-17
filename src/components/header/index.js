@@ -1,8 +1,10 @@
 import React from  "react";
+import * as ROUTES from '../../constants/routes';
+import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 const Header =()=>{
     return(
-    <header className="header_area">
+    <header className="header_area navbar_fixed">
 		<div className="main_menu">
 			<div className="container">
 				<nav className="navbar navbar-expand-lg navbar-light">
@@ -17,11 +19,12 @@ const Header =()=>{
 						{/* <!-- Collect the nav links, forms, and other content for toggling --> */}
 						<div className="collapse navbar-collapse offset" id="navbarSupportedContent">
 							<ul className="nav navbar-nav menu_nav ml-auto">
-								<li className="nav-item active"><a className="nav-link" href="index.html">Home</a></li> 
-								<li className="nav-item"><a className="nav-link" href="about-us.html">About</a></li> 
-								<li className="nav-item"><a className="nav-link" href="causes.html">Causes</a></li>
+								<li className="nav-item active">
+									<Link to={ROUTES.HOME}><a className="nav-link" href="">Home</a></Link></li> 
+								<li className="nav-item"><Link to={ROUTES.ABOUT}><a className="nav-link" href="">About</a></Link></li> 
+								<li className="nav-item"><Link to={ROUTES.CAUSE}><a className="nav-link" href="">Causes</a></Link></li>
 								<li className="nav-item submenu dropdown">
-									<a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+									<a href="/" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
 									<ul className="dropdown-menu">
 										<li className="nav-item"><a className="nav-link" href="events.html">Events</a> </li>
 										<li className="nav-item"><a className="nav-link" href="event-details.html">Event Details</a></li>
@@ -29,13 +32,13 @@ const Header =()=>{
 									</ul>
 								</li> 
 								<li className="nav-item submenu dropdown">
-									<a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+									<a href="/" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
 									<ul className="dropdown-menu">
-										<li className="nav-item"><a className="nav-link" href="blog.html">Blog</a></li>
-										<li className="nav-item"><a className="nav-link" href="single-blog.html">Blog Details</a></li>
+										<li className="nav-item"><Link to={ROUTES.BLOG}><a className="nav-link" href="blog.html">Blog</a></Link></li>
+										<li className="nav-item"><Link to={ROUTES.CONTACT}><a className="nav-link" href="single-blog.html">Blog Details</a></Link></li>
 									</ul>
 								</li> 
-								<li className="nav-item"><a className="nav-link" href="contact.html">Contact</a></li>
+								<li className="nav-item"><Link to={ROUTES.CONTACT}><a className="nav-link" href="">Contact</a></Link></li>
 							</ul>
 						</div> 
 					</div>

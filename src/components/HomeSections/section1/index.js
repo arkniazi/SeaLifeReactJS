@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Cause = ()=>{
+const OurCause = ()=>{
     return(
     <section className="causes_area">
 		<div className="container">
@@ -42,4 +42,4 @@ const Cause = ()=>{
     )
 }
 
-export default Cause;
+export default OurCause;
